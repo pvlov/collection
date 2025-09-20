@@ -8,22 +8,25 @@
 </head>
 
 <body>
-	<h2>My collection of various interesting articles/blogs/whatever</h2>
+	<header>
+		<h2>My collection of various interesting articles/blogs/whatever</h2>
 
-	This is a collection of interesting (mostly technical) articles i have come
-	across. I _try_ to roughly cluster them and some articles may come up twice
-	if i feel like they would fit a certain theme nicely or offer another
-	viewpoint on a topic. I might add some small comments here and there, but
-	they are only my mindless rambling - feel free to ignore them. Is this
-	actively maintained or up to date in any way? Idk. probably not.
+		This is a collection of interesting (mostly technical) articles i have
+		come across. I <i>try</i> to roughly cluster them and some articles may
+		come up twice if i feel like they would fit a certain theme nicely or
+		offer another viewpoint on a topic. I might add some small comments here
+		and there, but they are only my mindless rambling - feel free to ignore
+		them. Is this actively maintained or up to date in any way? Idk. probably
+		not.
 
-	<br />
-	<br />
+		<br />
+		<br />
 
-	DISCLAIMER: The content on this site is a collection of third-party articles
-	provided for general information and does not constitute an endorsement or
-	guarantee of accuracy. All views are those of the original authors, and you
-	use this information at your own risk.
+		DISCLAIMER: The content on this site is a collection of third-party
+		articles provided for general information and does not constitute an
+		endorsement or guarantee of accuracy. All views are those of the original
+		authors, and you use this information at your own risk.
+	</header>
 
 	<h3>Fancy schmancy category theory and more fun</h3>
 	<ul>
@@ -37,6 +40,64 @@
 				algebraic data structures in imperative languages</a>
 			<a href="https://web.archive.org/web/20250903095057/https://blog.jle.im/entry/faking-adts-and-gadts.html">
 				[archived link]
+			</a>
+		</li>
+
+		<li>
+			<a style="margin-right: 10px" href="https://blog.veritates.love/monoids_in_public.html">Finding monoids in
+				the wild</a>
+			<a href="https://web.archive.org/web/20250918045602/https://blog.veritates.love/monoids_in_public.html">
+				[archived link]
+			</a>
+		</li>
+	</ul>
+
+	<h3>Some interesting takes on "Make invalid state(s) unrepresantable"</h3>
+	This is more regarding contracts between APIs (e.g. protobuf, rest) and less
+	about your own domain models but you can naturally extend some of the
+	arguments to them as well.
+	<ul>
+		<li>
+			<a href="https://www.seangoedecke.com/invalid-states/">
+				'Make invalid states unrepresentable' considered harmful
+			</a>
+		</li>
+		<li>
+			<a href="https://reasonablypolymorphic.com/blog/protos-are-wrong/">
+				Protobuffers Are Wrong
+			</a>
+		</li>
+	</ul>
+	Two responses from the main author and creator of protobuf v2
+	<ul>
+		<li>
+			<a href="https://news.ycombinator.com/item?id=18196288">
+				HackerNews comment on "Protobuffers Are Wrong" #1
+			</a>
+		</li>
+		<li>
+			<a href="https://news.ycombinator.com/item?id=45139656#45140590">
+				HackerNews comment on "Protobuffers Are Wrong" #2
+			</a>
+		</li>
+	</ul>
+	In the context of validation and how to enforce contracts in your app, the
+	approach of "parse, don't validate" is also important. However, this
+	approach is not perfect either, which the second linked article adresses a
+	bit (TLDR: Error boundaries become super clear and your app can always
+	assume a "clean slate", however the price you pay is that most parsers give
+	<i>really</i> bad feedback/error messages and that you lose the ability to
+	handle some special cases differently.)
+	<ul>
+		<li>
+			<a href="https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/">
+				Parse, don't validate
+			</a>
+		</li>
+		<li>
+			<a href="https://www.databend.com/blog/category-engineering/2025-09-10-query-parser/">
+				Why We Built Our Own SQL Parser From Scratch: A Rust Implementation
+				Story
 			</a>
 		</li>
 	</ul>
