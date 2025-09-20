@@ -52,7 +52,7 @@
 		</li>
 	</ul>
 
-	<h3>Some interesting takes on "Make invalid state(s) unrepresantable"</h3>
+	<h3>Some interesting takes on "Make invalid state(s) unrepresentable</h3>
 	This is more regarding contracts between APIs (e.g. protobuf, rest) and less
 	about your own domain models but you can naturally extend some of the
 	arguments to them as well.
@@ -82,12 +82,12 @@
 		</li>
 	</ul>
 	In the context of validation and how to enforce contracts in your app, the
-	approach of "parse, don't validate" is also important. However, this
-	approach is not perfect either, which the second linked article adresses a
-	bit (TLDR: Error boundaries become super clear and your app can always
-	assume a "clean slate", however the price you pay is that most parsers give
-	<i>really</i> bad feedback/error messages and that you lose the ability to
-	handle some special cases differently.)
+	"parse, don't validate" approach is also important. However, this approach
+	is not perfect either, which the second linked article addresses a bit
+	(TLDR: Error boundaries become super clear, and your app can always assume a
+	"clean slate"; however, the price you pay is that most parsers give really
+	bad feedback/error messages, and you lose the ability to handle some special
+	cases differently).
 	<ul>
 		<li>
 			<a href="https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/">
